@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 10px;
+  background-color: #1f1717;
+}
+
+.slider {
+  margin: 0 auto;
+  width: 80rem;
+  height: 40rem;
+
+  border-radius: 1rem;
+  border: #fcf5ed solid 1px;
+
+  overflow: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 40rem;
+
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+
+  position: relative;
+
+  transition: 1s;
+}
+
+.slide img {
+  width: 80rem;
+}
+
+.manual-navigation {
+  position: absolute;
+
+  width: 80rem;
+  margin-top: -3.5rem;
+
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #fff;
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+  cursor: pointer;
+
+  transition: 200ms;
+}
+
+.manual-btn:hover {
+  background-color: #fff;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+.navigation-auto div {
+  border: 2px solid cornflowerblue;
+  border-radius: 1rem;
+
+  padding: 0.5rem;
+
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.navigation-auto {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+
+  width: 80rem;
+  margin-top: 36.5rem;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: #fff;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: #fff;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: #fff;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background-color: #fff;
+}
